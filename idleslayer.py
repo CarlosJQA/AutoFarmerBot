@@ -17,6 +17,12 @@ def click(x,y):
     pyautogui.click()
     time.sleep(random.uniform(0.1,0.5))
 
+def escape():
+    pyautogui.keyDown('escape')
+    time.sleep(0.2)
+    pyautogui.keyUp('escape')
+
+
 #Main menu click
 click(815,22)
 
@@ -45,3 +51,12 @@ while counter < 3:
     time.sleep(0.5)
     if counter == 3:
         break
+
+
+#Close game
+
+escape()
+time.sleep(1)
+escape()
+
+click(845,815)
