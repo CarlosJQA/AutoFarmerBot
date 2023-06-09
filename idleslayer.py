@@ -7,8 +7,34 @@ import subprocess
 
 counter = 0
 
+def doubleclick(x,y):
+    win32api.SetCursorPos((x,y))
+    pyautogui.doubleClick()
+    time.sleep(random.uniform(0.1,0.5))
+
+nombreJuego = ("Idle Slayer")
+
+steam_path = "C:\Program Files (x86)\Steam\steam.exe"
+
+command = [steam_path]
+
+subprocess.Popen(command)
+
+time.sleep(1)
+
+click(233,58)    
+
+click(83,185)
+
+pyautogui.typewrite(nombreJuego)
+
+time.sleep(0.5)
+
+doubleclick(78,244)
+
+
 #Search and open the game with opensteam.py
-subprocess.call(["python", "Documents\Programas python\opensteam.py"])
+#subprocess.call(["python", "Documents\Programas python\opensteam.py"])
 
 time.sleep(4)
 
@@ -16,6 +42,8 @@ def click(x,y):
     win32api.SetCursorPos((x,y))
     pyautogui.click()
     time.sleep(random.uniform(0.1,0.5))
+
+
 
 def escape():
     pyautogui.keyDown('escape')
