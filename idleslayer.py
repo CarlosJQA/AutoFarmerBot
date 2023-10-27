@@ -70,13 +70,13 @@ time.sleep(0.5)
 
 win32api.SetCursorPos((736, upgradePos))
 
-#This loops will reclaim the rewards from the minions and send them again on a mission if you have the required amount of slayer points
+#This loop will reclaim the rewards from the minions and send them again on a mission if you have the required amount of slayer points
 while counter < 3:
     win32api.SetCursorPos((736, upgradePos))
     click(736, upgradePos)
     counter += 1
     upgradePos += 274
-    time.sleep(0.5)
+    time.sleep(0.2)
     if counter == 3:
         break
 
@@ -88,3 +88,10 @@ time.sleep(1)
 escape()
 
 click(845,815)
+
+#reset library search bar
+subprocess.Popen(command)
+time.sleep(0.5)
+click(215,180)
+#run cookieclicker script
+subprocess.run(['python','C:\\Users\\CarlosJD\\Documents\\Programas python\\cookieclicker.py'])

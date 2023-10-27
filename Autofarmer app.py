@@ -5,7 +5,8 @@ import customtkinter
 import os 
 
 def call_script(script_name):
-    scrip_path = os.path.join("Documents", "Programas Python", script_name)
+    base_path = "C:\\Users\\CarlosJD\\Documents\\Programas python"
+    scrip_path = os.path.join(base_path, script_name)
     subprocess.call(["python", scrip_path])
 
 
@@ -22,8 +23,13 @@ frame.grid()
 button = customtkinter.CTkButton(master=root, text="Idle Slayer", command=lambda: call_script("idleslayer.py"))
 button.place(relx= 0.5, rely= 0.5, anchor= CENTER)
 
-button2 = customtkinter.CTkButton(master=root, text="Idle Wasteland", command=lambda: call_script("idlewasteland.py"))
+button2 = customtkinter.CTkButton(master=root, text="Cookie Clicker", command=lambda: call_script("cookieclicker.py"))
 button2.place(relx= 0.5, rely= 0.3, anchor= CENTER)
 
+button3 = customtkinter.CTkButton(master=root, text="Dont Starve", command=lambda: call_script("dont starve daily skin.py"))
+button3.place(relx= 0.5, rely= 0.1, anchor= CENTER)
+
+button4 = customtkinter.CTkButton(master=root, text="Bit Heroes", command=lambda: call_script("bitheroes.py"))
+button4.place(relx= 0.5, rely= 0.7, anchor= CENTER)
 
 root.mainloop()

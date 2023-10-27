@@ -15,7 +15,9 @@ def doubleclick(x,y):
     pyautogui.doubleClick()
     time.sleep(random.uniform(0.1,0.5))
 
-nombreJuego = ("Idle Wasteland")
+counter = 0
+upgradePosY = 387
+nombreJuego = ("Cookie Clicker")
 
 steam_path = "C:\Program Files (x86)\Steam\steam.exe"
 
@@ -35,8 +37,22 @@ pyautogui.typewrite(nombreJuego)
 time.sleep(0.5)
 
 doubleclick(78,244)
+time.sleep(5)
 
-#selecting screen resolution
+#loop for buildings upgrades
+while counter < 6:
+    win32api.SetCursorPos((1749, upgradePosY))
+    click(1749, upgradePosY)
+    counter += 1
+    upgradePosY += 63
+    time.sleep(0.1)
+    if counter == 6:
+        break
+    
 
-
-
+#close game
+click(1903,7)
+#reset steam search bar
+subprocess.Popen(command)
+time.sleep(0.5)
+click(215,180)
