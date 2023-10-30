@@ -39,12 +39,12 @@ pyautogui.typewrite(nombreJuego)
 time.sleep(0.5)
 doubleclick(78,244)
 #waiting time for log in
-time.sleep(50)
+time.sleep(60)
 doubleclick(78,244)
 #daily rewards
-click(638,732)
-click(910,254)
+click(985,993)
+click(1337,331)
 
 #quit game
-click(1243,14)
+click(1893,20)
 resetlibrarysearchbar()
