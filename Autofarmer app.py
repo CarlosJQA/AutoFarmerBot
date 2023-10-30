@@ -5,7 +5,7 @@ import customtkinter
 import os 
 
 def call_script(script_name):
-    base_path = "C:\\Users\\CarlosJD\\Documents\\Programas python"
+    base_path = "C:\\Users\\CarlosJD\\Documents\\AutoFarmer"
     scrip_path = os.path.join(base_path, script_name)
     subprocess.call(["python", scrip_path])
 
