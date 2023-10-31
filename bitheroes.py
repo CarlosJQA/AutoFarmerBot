@@ -48,3 +48,5 @@ click(1337,331)
 #quit game
 click(1893,20)
 resetlibrarysearchbar()
+#run idleon script
+subprocess.run(['python','C:\\Users\\CarlosJD\\Documents\\AutoFarmer\\idleon.py'])
