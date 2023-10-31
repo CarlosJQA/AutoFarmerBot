@@ -42,4 +42,4 @@ subprocess.Popen(command)
 time.sleep(0.5)
 click(215,180)
 #run idleslayer script
-subprocess.run(['python','C:\\Users\\CarlosJD\\Documents\\Programas python\\idleslayer.py'])
+subprocess.run(['python','C:\\Users\\CarlosJD\\Documents\\AutoFarmer\\idleslayer.py'])

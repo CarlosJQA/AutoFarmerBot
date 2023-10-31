@@ -94,4 +94,4 @@ subprocess.Popen(command)
 time.sleep(0.5)
 click(215,180)
 #run cookieclicker script
-subprocess.run(['python','C:\\Users\\CarlosJD\\Documents\\Programas python\\cookieclicker.py'])
+subprocess.run(['python','C:\\Users\\CarlosJD\\Documents\\AutoFarmer\\cookieclicker.py'])
