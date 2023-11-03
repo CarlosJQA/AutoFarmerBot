@@ -44,7 +44,7 @@ doubleclick(78,244)
 #daily rewards
 click(985,993)
 click(1337,331)
-
+time.sleep(random.uniform(1, 1.3))
 #quit game
 click(1893,20)
 resetlibrarysearchbar()

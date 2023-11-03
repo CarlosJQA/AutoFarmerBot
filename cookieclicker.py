@@ -37,7 +37,7 @@ pyautogui.typewrite(nombreJuego)
 time.sleep(0.5)
 
 doubleclick(78,244)
-time.sleep(5)
+time.sleep(7)
 
 #loop for buildings upgrades
 while counter < 6:
