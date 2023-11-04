@@ -103,4 +103,4 @@ click(912,843)
 click(1894,13)
 time.sleep(0.5)
 #reset library search bar
-resetlibrarysearchbar
+resetlibrarysearchbar()
