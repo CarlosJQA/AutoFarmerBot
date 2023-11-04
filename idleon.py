@@ -8,12 +8,7 @@ import keyboard
 from PIL import Image
 from io import BytesIO
 from PIL import ImageOps
-
-
 counter = 0
-image_path = 'claim.PNG'  # claim button image path
-confidence = 0.7  # confidence treshold
-
 
 def holdclick(x,y):
     win32api.SetCursorPos((x,y))
@@ -34,9 +29,6 @@ def resetlibrarysearchbar():
     subprocess.Popen(command)
     time.sleep(0.5)
     click(215,180)
-
-
-
 
 nombreJuego = ("Legends of Idleon MMO")
 
@@ -73,11 +65,12 @@ click(659, 786)
 click(1760,760)
 time.sleep(random.uniform(5, 7))
 
-# Cargar la imagen original
-    image = Image.open('claim.PNG')
-   #search image on screen
-location = pyautogui.locateOnScreen('claim.PNG', confidence= 0.8)
+#load original image
+image = Image.open('claim.PNG')
 
+#search image on screen
+location = pyautogui.locateOnScreen('claim.PNG', confidence= 0.8)
+print("Location:", location)
 time.sleep(1)
 #check if the image was found 
 if location is not None:
@@ -97,7 +90,7 @@ if location is not None:
     
     else:
         print('image was not found')
-time.sleep(random.uniform(1.2,1.5))
+    
 
 #click codex
 click(1385,980)
@@ -105,13 +98,9 @@ click(1385,980)
 click(1170,214)
 #click ez access
 click(912,843)
-time.sleep(random.uniform(1,1.5))
-
-#claim ez acess
-#detect_and_click_image('claim.PNG', confidence=0.7)
 
 #close game
 click(1894,13)
 time.sleep(0.5)
 #reset library search bar
-resetlibrarysearchbar()
+resetlibrarysearchbar
