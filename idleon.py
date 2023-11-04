@@ -8,8 +8,9 @@ import keyboard
 from PIL import Image
 from io import BytesIO
 from PIL import ImageOps
-counter = 0
 
+counter = 0
+upgradePosY = 347
 def holdclick(x,y):
     win32api.SetCursorPos((x,y))
     pyautogui.mouseDown()
@@ -98,7 +99,17 @@ click(1385,980)
 click(1170,214)
 #click ez access
 click(912,843)
+#loop for claim ez access stuff
+while counter < 2:
+    win32api.SetCursorPos((707, upgradePosY))
+    click(707, upgradePosY)
+    counter += 1
+    upgradePosY += 95
+    time.sleep(0.1)
+    if counter == 2:
+        break
 
+time.sleep(random.uniform(1.2, 1.5))
 #close game
 click(1894,13)
 time.sleep(0.5)
