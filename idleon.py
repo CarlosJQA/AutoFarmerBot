@@ -109,7 +109,16 @@ while counter < 2:
     if counter == 2:
         break
 
+#click arcade
+click(1318,583)
+
+#claim arcade balls
+click(1556,75)
+
+#launch arcade balls
+holdclick(1724,970)
 time.sleep(random.uniform(1.2, 1.5))
+
 #close game
 click(1894,13)
 time.sleep(0.5)
