@@ -119,6 +119,9 @@ click(1556,75)
 holdclick(1724,970)
 time.sleep(random.uniform(1.2, 1.5))
 
+#waiting for arcade minigame
+time.sleep(random.uniform(10.2, 14.5))
+
 #close game
 click(1894,13)
 time.sleep(0.5)

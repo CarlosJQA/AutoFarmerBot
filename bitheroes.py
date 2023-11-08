@@ -43,6 +43,7 @@ time.sleep(60)
 doubleclick(78,244)
 #daily rewards
 click(985,993)
+time.sleep(random.uniform(1, 1.3))
 click(1337,331)
 time.sleep(random.uniform(1, 1.3))
 #quit game
