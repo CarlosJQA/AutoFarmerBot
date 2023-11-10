@@ -73,12 +73,15 @@ image = Image.open('claim.PNG')
 location = pyautogui.locateOnScreen('claim.PNG', confidence= 0.8)
 print("Location:", location)
 time.sleep(1)
+
 #check if the image was found 
 if location is not None:
+    
     #take a screenshot of screen region
     left, top = location[0], location[1]
     width, height = image.width, image.height
     screenshot = pyautogui.screenshot(region=(left, top, width, height))
+
     #Compare original image with screenshot
     similarity = image == screenshot
     print("Similarity:", similarity)
@@ -122,6 +125,24 @@ time.sleep(random.uniform(1.2, 1.5))
 #waiting for arcade minigame
 time.sleep(random.uniform(10.2, 14.5))
 
+#close arcade
+click(1814,72)
+
+
+
+#click codex button
+click(1385,980)
+
+#click gaming menu
+click(1717,557)
+#click harvest all button
+click(1338,84)
+time.sleep(random.uniform(2,2.5))
+#click sprinkler
+click(1171,501)
+#click harvest all button
+click(1338,84)
+time.sleep(random.uniform(2,2.5))
 #close game
 click(1894,13)
 time.sleep(0.5)

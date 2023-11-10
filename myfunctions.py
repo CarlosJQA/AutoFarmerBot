@@ -6,7 +6,7 @@ from io import BytesIO
 from PIL import ImageOps
 import win32api, win32com
 
-
+#Function for image recognition
 def detect_image_and_click():
     #load original image
  image = Image.open('claim.PNG')
@@ -35,11 +35,20 @@ if location is not None:
         print('image was not found')
 
 
-#Basic functions for clicking
+#Basic function for clicking
 def click(x,y):
     win32api.SetCursorPos((x,y))
     pyautogui.click()
     time.sleep(random.uniform(0.1, 0.5))
 
+#Basic function for hold clicking
+def holdclick(x,y):
+    win32api.SetCursorPos((x,y))
+    pyautogui.mouseDown()
+    time.sleep(random.uniform(5,7.5))
 
-
+#Function for reseting steam library search bar
+def resetlibrarysearchbar():
+    subprocess.Popen(command)
+    time.sleep(0.5)
+    click(215,180)
