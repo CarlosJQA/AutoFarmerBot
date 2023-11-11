@@ -32,4 +32,7 @@ button3.place(relx= 0.5, rely= 0.1, anchor= CENTER)
 button4 = customtkinter.CTkButton(master=root, text="Bit Heroes", command=lambda: call_script("bitheroes.py"))
 button4.place(relx= 0.5, rely= 0.7, anchor= CENTER)
 
+button5 = customtkinter.CTkButton(master=root, text="Legends of Idleon MMO", command=lambda: call_script("idleon.py"))
+button5.place(relx= 0.5, rely= 0.9, anchor= CENTER)
+
 root.mainloop()

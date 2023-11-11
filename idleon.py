@@ -31,6 +31,20 @@ def resetlibrarysearchbar():
     time.sleep(0.5)
     click(215,180)
 
+def find_squirrel():
+    picture = pyautogui.screenshot(region=(164,121,1276,722))
+    width, height = picture.width, picture.height
+
+    for x in range(0,1276,10):
+        for y in range(0,722,10):
+            r,g,b = picture.getpixel((x,y))
+
+            if b == 126:
+                click(x+180, y+131)
+                time.sleep(0.05)
+                return
+
+
 nombreJuego = ("Legends of Idleon MMO")
 
 steam_path = "C:\Program Files (x86)\Steam\steam.exe"
@@ -143,6 +157,9 @@ click(1171,501)
 #click harvest all button
 click(1338,84)
 time.sleep(random.uniform(2,2.5))
+#Squirrel claim acorn function
+find_squirrel()
+time.sleep(2)
 #close game
 click(1894,13)
 time.sleep(0.5)
