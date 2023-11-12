@@ -11,6 +11,7 @@ from PIL import ImageOps
 
 counter = 0
 upgradePosY = 347
+upgradePosX = 585
 def holdclick(x,y):
     win32api.SetCursorPos((x,y))
     pyautogui.mouseDown()
@@ -42,7 +43,7 @@ def find_squirrel():
             if b == 126:
                 click(x+180, y+131)
                 time.sleep(0.05)
-                return
+                break
 
 
 nombreJuego = ("Legends of Idleon MMO")
@@ -124,6 +125,7 @@ while counter < 2:
     upgradePosY += 95
     time.sleep(0.1)
     if counter == 2:
+        counter = 0
         break
 
 #click arcade
@@ -141,7 +143,7 @@ time.sleep(random.uniform(10.2, 14.5))
 
 #close arcade
 click(1814,72)
-
+time.sleep(random.uniform(0.5,0.8))
 
 
 #click codex button
@@ -159,8 +161,22 @@ click(1338,84)
 time.sleep(random.uniform(2,2.5))
 #Squirrel claim acorn function
 find_squirrel()
-time.sleep(2)
+time.sleep(random.uniform(6,7))
+#click fertilizer upgrades
+click(1648,201)
+#fertilizer upgrades loop
+while counter < 3:
+    win32api.SetCursorPos((upgradePosX, 507))
+    click(upgradePosX, 507)
+    counter += 1
+    upgradePosX += 370
+    time.sleep(0.1)
+    if counter == 3:
+        counter = 0
+        break
+
 #close game
+time.sleep(2)
 click(1894,13)
 time.sleep(0.5)
 #reset library search bar
