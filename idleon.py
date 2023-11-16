@@ -139,11 +139,11 @@ holdclick(1724,970)
 time.sleep(random.uniform(1.2, 1.5))
 
 #waiting for arcade minigame
-time.sleep(random.uniform(10.2, 14.5))
+time.sleep(random.uniform(20, 20.5))
 
 #close arcade
 click(1814,72)
-time.sleep(random.uniform(0.5,0.8))
+time.sleep(random.uniform(1,1.5))
 
 
 #click codex button
