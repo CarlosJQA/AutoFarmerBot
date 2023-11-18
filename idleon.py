@@ -44,6 +44,10 @@ def find_squirrel():
                 click(x+180, y+131)
                 time.sleep(0.05)
                 break
+def escape():
+    pyautogui.keyDown('escape')
+    time.sleep(random.uniform(0.25, 0.50))
+    pyautogui.keyUp('escape')
 
 
 nombreJuego = ("Legends of Idleon MMO")
@@ -141,6 +145,9 @@ time.sleep(random.uniform(1.2, 1.5))
 #waiting for arcade minigame
 time.sleep(random.uniform(20, 20.5))
 
+#close arcade upgrades menu
+click(1626,165)
+
 #close arcade
 click(1814,72)
 time.sleep(random.uniform(1,1.5))
@@ -151,19 +158,25 @@ click(1385,980)
 
 #click gaming menu
 click(1717,557)
+
 #click harvest all button
 click(1338,84)
 time.sleep(random.uniform(2,2.5))
+
 #click sprinkler
 click(1171,501)
+
 #click harvest all button
 click(1338,84)
 time.sleep(random.uniform(2,2.5))
+
 #Squirrel claim acorn function
 find_squirrel()
 time.sleep(random.uniform(6,7))
+
 #click fertilizer upgrades
 click(1648,201)
+
 #fertilizer upgrades loop
 while counter < 3:
     win32api.SetCursorPos((upgradePosX, 507))
@@ -174,10 +187,22 @@ while counter < 3:
     if counter == 3:
         counter = 0
         break
-
+#close gaming menu
+escape()
+#Select W2
+click(133,307)
+#Teleport to W2 Town
+pyautogui.keyDown('m')
+time.sleep(random.uniform(0.25,0.5))
+pyautogui.keyUp('m')
+click(680,348)
+time.sleep(random.uniform(1,2.5))
+click(652,834)
+time.sleep(random.uniform(1,2.5))
 #close game
 time.sleep(2)
 click(1894,13)
 time.sleep(0.5)
+
 #reset library search bar
 resetlibrarysearchbar()
