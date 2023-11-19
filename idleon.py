@@ -12,6 +12,7 @@ from PIL import ImageOps
 counter = 0
 upgradePosY = 347
 upgradePosX = 585
+
 def holdclick(x,y):
     win32api.SetCursorPos((x,y))
     pyautogui.mouseDown()
@@ -25,6 +26,11 @@ def doubleclick(x,y):
 def click(x,y):
     win32api.SetCursorPos((x,y))
     pyautogui.click()
+    time.sleep(random.uniform(0.1, 0.5))
+
+def tripleclick(x,y):
+    win32api.SetCursorPos((x,y))
+    pyautogui.tripleClick
     time.sleep(random.uniform(0.1, 0.5))
 
 def resetlibrarysearchbar():
@@ -84,6 +90,9 @@ click(659, 786)
 #press play
 click(1760,760)
 time.sleep(random.uniform(5, 7))
+
+#close random event menu 
+click(144,447)
 
 #load original image
 image = Image.open('claim.PNG')
@@ -190,15 +199,25 @@ while counter < 3:
 #close gaming menu
 escape()
 #Select W2
-click(133,307)
-#Teleport to W2 Town
 pyautogui.keyDown('m')
 time.sleep(random.uniform(0.25,0.5))
 pyautogui.keyUp('m')
+click(133,307)
+
+#Teleport to W2 Town
 click(680,348)
 time.sleep(random.uniform(1,2.5))
 click(652,834)
 time.sleep(random.uniform(1,2.5))
+#click cauldron
+click(395,741)
+time.sleep(random.uniform(3, 3.2))
+#click liquid menu
+click(297,102)
+#Select 1st gem purchase
+click(598,376)
+#buy it 3 times
+tripleclick(1233,616)
 #close game
 time.sleep(2)
 click(1894,13)
