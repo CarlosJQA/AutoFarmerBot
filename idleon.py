@@ -216,8 +216,11 @@ time.sleep(random.uniform(3, 3.2))
 click(297,102)
 #Select 1st gem purchase
 click(598,376)
+time.sleep(random.uniform(0.5,0.6))
 #buy it 3 times
-tripleclick(1233,616)
+for _ in range(3):
+    click(1233,616)
+
 #close game
 time.sleep(2)
 click(1894,13)
