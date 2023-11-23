@@ -55,6 +55,13 @@ def escape():
     time.sleep(random.uniform(0.25, 0.50))
     pyautogui.keyUp('escape')
 
+def change_world():
+    pyautogui.keyDown('m')
+    time.sleep(random.uniform(0.25, 0.50))
+    pyautogui.keyUp('m')
+    click(153,188)
+    time.sleep(random.uniform(0.25, 0.50))
+    click(652,834)
 
 nombreJuego = ("Legends of Idleon MMO")
 
@@ -126,10 +133,13 @@ if location is not None:
 
 #click codex
 click(1385,980)
+
 #click quick ref
 click(1170,214)
+
 #click ez access
 click(912,843)
+
 #loop for claim ez access stuff
 while counter < 2:
     win32api.SetCursorPos((707, upgradePosY))
@@ -221,6 +231,16 @@ time.sleep(random.uniform(0.5,0.6))
 for _ in range(3):
     click(1233,616)
 
+#Select 2st gem purchase
+click(1390,498)
+click(1103,422)
+click(598,376)
+time.sleep(random.uniform(0.5,0.6))
+#buy it 3 times
+for _ in range(3):
+    click(1233,616)
+
+change_world()
 #close game
 time.sleep(2)
 click(1894,13)
