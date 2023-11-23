@@ -8,3 +8,11 @@ A Bot for some games I've been playing (most of them idles)
 * Dark Orbit auto daily reward
 * Cookie Clicker autoupgrade buildings
 * Legends of Idleon auto claim afk rewards and ez access menu
+
+  
+## Dependencies
+* Pyautogui
+* win32api
+* Pillow
+* subprocess
+* random
