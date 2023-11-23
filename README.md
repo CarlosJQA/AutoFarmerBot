@@ -1,5 +1,5 @@
-# AutoFarmerBot
-A Bot for some games I've been playing (most of them idles) 
+# <img src="Icons/Farmerbot.png" alt="logo" width="48"> AutoFarmer Bot
+A Bot for some games I've been playing. Just for the joy of automating stuff! 
 ## Features
 
 * Don't Starve Together auto daily skin
