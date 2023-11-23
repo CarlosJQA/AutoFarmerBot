@@ -1,4 +1,4 @@
-# <img src="Icons/Farmerbot.png" alt="logo" width="32"> AutoFarmer Bot
+# <img src="Icons/Farmerbot.png" alt="logo" width="48"> AutoFarmer Bot
 A Bot for some games I've been playing (most of them idles) 
 ## Features
 
